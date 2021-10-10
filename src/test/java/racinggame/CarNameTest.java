@@ -11,7 +11,7 @@ public class CarNameTest {
     void 이름_입력_받기() {
         String input = "pobi,crong,honux";
         CarName carName = new CarName(input);
-        assertEquals(input, carName.getNames());
+        assertEquals(input, carName.getName());
     }
 
     @Test

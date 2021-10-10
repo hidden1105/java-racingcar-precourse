@@ -5,11 +5,11 @@ public class CarName {
     private final String SEPARATOR = ",";
     private final int MAX_NAME_LEN = 5;
 
-    private String names;
+    private String name;
 
     public CarName(String input) {
         validate(input);
-        names = input;
+        name = input;
     }
 
     private void validate(String input) {
@@ -29,7 +29,11 @@ public class CarName {
         }
     }
 
-    public String getNames() {
-        return names;
+    public String getName() {
+        return name;
+    }
+
+    public String[] getNames() {
+        return name.split(SEPARATOR);
     }
 }
