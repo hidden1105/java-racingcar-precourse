@@ -1,11 +1,6 @@
 package racinggame;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -22,5 +17,11 @@ public class CarNameTest {
     @Test
     void 빈문자열_입력시_에러() {
         assertThrows(IllegalArgumentException.class, () -> new CarName(""));
+    }
+
+    @Test
+    void 이름_5자_초과_입력시_에러() {
+        String input = "12345,123456";
+        assertThrows(IllegalArgumentException.class, () -> new CarName(input));
     }
 }
