@@ -15,7 +15,7 @@ public class Race {
     }
 
     public static List<Car> generateCars(CarName carName) {
-        String[] names = carName.getNames();
+        List<String> names = carName.getNames();
         List<Car> list = new ArrayList<>();
         for (String name :names) {
             list.add(new Car(name));

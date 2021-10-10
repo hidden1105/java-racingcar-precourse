@@ -1,15 +1,18 @@
 package racinggame;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CarName {
     private final static String INPUT_MESSAGE = "[ERROR] 자동차이름은쉼표(,)를 기준으로 구분하며 이름은5자이하로 입력하세요";
     private final String SEPARATOR = ",";
     private final int MAX_NAME_LEN = 5;
 
-    private String name;
+    private List<String> names;
 
     public CarName(String input) {
         validate(input);
-        name = input;
+        names = Arrays.asList(input.split(SEPARATOR));
     }
 
     private void validate(String input) {
@@ -29,11 +32,7 @@ public class CarName {
         }
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String[] getNames() {
-        return name.split(SEPARATOR);
+    public List<String> getNames() {
+        return names;
     }
 }
