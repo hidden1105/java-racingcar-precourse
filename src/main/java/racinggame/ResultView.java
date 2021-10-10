@@ -7,7 +7,7 @@ public class ResultView {
 
     public static void view(List<Car> cars) {
         for (Car car : cars) {
-            System.out.println(car.getName() + ":" + getPositionView(car.getPosition()));
+            System.out.println(car.getName() + " : " + getPositionView(car.getPosition()));
         }
         System.out.println();
     }
@@ -18,5 +18,9 @@ public class ResultView {
             sb.append(POSITION);
         }
         return sb.toString();
+    }
+
+    public static void viewWinners(List<String> cars) {
+        System.out.println("최종 우승자는 " + String.join(",", cars) + " 입니다.");
     }
 }
