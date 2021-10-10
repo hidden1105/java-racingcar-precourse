@@ -8,7 +8,7 @@ public class MoveNumber {
 
     public MoveNumber(int number) {
         if (number < MIN_MOVE_NUMBER || number > MAX_MOVE_NUMBER) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("[ERROR]");
         }
         this.number = number;
     }
