@@ -26,4 +26,10 @@ public class Race {
     public List<Car> getCars() {
         return cars;
     }
+
+    public void play() {
+        for (int i = 0; i < raceCount.getGameCount(); i++) {
+            cars.forEach((car -> car.move(new MoveNumber(Randoms.pickNumberInRange(0, 9)))));
+        }
+    }
 }
